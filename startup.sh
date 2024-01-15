@@ -14,6 +14,7 @@ if [ "$STAGING" = "true" ]; then
         --agree-tos \
         --redirect \
         --keep-until-expiring \
+        --http-01-port "$HTTP_01_PORT" \
         --staging \
         -d "$DOMAINS" >> /proc/1/fd/1 2>&1
 else
@@ -23,6 +24,7 @@ else
         --agree-tos \
         --redirect \
         --keep-until-expiring \
+        --http-01-port "$HTTP_01_PORT" \
         -d "$DOMAINS" >> /proc/1/fd/1 2>&1
 fi
 
