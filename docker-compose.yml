@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nginx-with-certbot:
+    build: github.com/JonahGroendal/nginx-with-certbot.git
+    image: nginx-with-certbot
+    environment:
+      - DOMAINS=my.example.com,example.com
